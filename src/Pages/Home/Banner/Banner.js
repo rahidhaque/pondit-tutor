@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
-import banner1 from '../../../Images/banner/Banner1.jpg'
-import banner2 from '../../../Images/banner/Banner2.jpg'
-import banner3 from '../../../Images/banner/Banner3.jpg'
+import banner1 from '../../../Images/banner/Banner1.png'
+import banner2 from '../../../Images/banner/Banner2.png'
+import banner3 from '../../../Images/banner/Banner3.png'
 
 
 
@@ -15,38 +15,38 @@ const Banner = () => {
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
-                <img style={{ height: '950px' }}
-                    className="d-block w-100"
+                <img
+                    className="d-block w-100 h-50"
                     src={banner1}
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3 className='text-secondary'>First slide label</h3>
-                    <p className='text-secondary'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img style={{ height: '950px' }}
-                    className="d-block w-100"
+                <img
+                    className="d-block w-100 h-50"
                     src={banner2}
                     alt="Second slide"
                 />
 
                 <Carousel.Caption>
-                    <h3 className='text-secondary'>Second slide label</h3>
-                    <p className='text-secondary'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img style={{ height: '950px' }}
-                    className="d-block w-100"
+                <img
+                    className="d-block w-100 h-50"
                     src={banner3}
                     alt="Third slide"
                 />
 
                 <Carousel.Caption>
-                    <h3 className='text-secondary'>Third slide label</h3>
-                    <p className='text-secondary'>
+                    <h3>Third slide label</h3>
+                    <p>
                         Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                     </p>
                 </Carousel.Caption>
