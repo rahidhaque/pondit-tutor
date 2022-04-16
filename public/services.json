@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Physics",
+        "price": "3000",
+        "description": "Your child may face Newton's Gravity while understanding the theory. But hiring me can eliminate those issue with ease.",
+        "img": "https://i.ibb.co/J743X04/service1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Mathematics",
+        "price": "5000",
+        "description": "Facing problem with algebra, trigonometry or some simple add or substract. So say no more and hire me today.",
+        "img": "https://i.ibb.co/B3H9J32/service2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Geography",
+        "price": "2000",
+        "description": "Having tough time understanding where biggest heritage is located in the world or having hard time understanding even where Bangladesh is located. Then hire me for this subject.",
+        "img": "https://i.ibb.co/nQqW6GL/service3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Biology",
+        "price": "4500",
+        "description": "Having hard time understanding. Then wait no more to hire me for this service.",
+        "img": "https://i.ibb.co/YBhY5H9/service4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Economics",
+        "price": "1000",
+        "description": "Having hard time understanding in calculating finacial situation. Then this is perfect deal for you",
+        "img": "https://i.ibb.co/YQ5xbdB/service5.jpg"
+    }
+]
