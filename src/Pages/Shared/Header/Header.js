@@ -5,7 +5,7 @@ import logo from '../../../Images/Logo.png'
 
 const Header = () => {
     return (
-        <div>
+        <div className='sticky-top'>
             <Navbar collapseOnSelect expand="lg" bg="secondary" variant='dark'>
                 <Container>
                     <Navbar.Brand as={Link} to="/">

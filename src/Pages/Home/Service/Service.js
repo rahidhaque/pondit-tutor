@@ -4,7 +4,7 @@ import { Button, Card, Col } from 'react-bootstrap';
 
 
 const Service = ({ service }) => {
-    const { id, name, img, description, price } = service;
+    const { name, img, description, price } = service;
     return (
         <div className="g-4 col-sm-12 col-md-6 col-lg-4">
             <Col>
