@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import './footer.css'
+import logo from '../../../Images/Logo.png'
 
 const Footer = () => {
     return (
@@ -95,6 +96,9 @@ const Footer = () => {
                         <div className="col-md-6 col-lg-8 mb-md-0 mb-4 text-center">
                             <p className="copyright mb-0">
                                 Copyright &copy;{new Date().getFullYear()} All rights reserved. | Pondit Tutor
+                            </p>
+                            <p>
+                                <img className='mt-2' src={logo} style={{ height: '35px' }} alt="" />
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4 text-md-right">
