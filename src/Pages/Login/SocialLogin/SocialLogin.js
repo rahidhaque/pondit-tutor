@@ -29,22 +29,22 @@ const SocialLogin = () => {
         <div className='container mb-5'>
             {errorElement} {loadingElement}
             <div className='d-flex align-items-center'>
-                <div style={{ height: '1px' }} className='bg-secondary w-50'></div>
+                <div style={{ height: '1px' }} className='bg-dark w-50'></div>
                 <p className='mt-2 px-2'>or</p>
-                <div style={{ height: '1px' }} className='bg-secondary w-50'></div>
+                <div style={{ height: '1px' }} className='bg-dark w-50'></div>
             </div>
             <div>
-                <button onClick={() => signInWithGoogle()} className='btn btn-secondary w-100 d-block mx-auto my-2'>
+                <button onClick={() => signInWithGoogle()} className='btn btn-dark w-100 d-block mx-auto my-2'>
                     <img style={{ width: '30px' }} src={googleLogo} alt="" />
                     <span className='px-2 text-white'>Google Sign In</span></button>
             </div >
             <div>
-                <button className='btn btn-secondary w-100 d-block mx-auto my-2'>
+                <button className='btn btn-dark w-100 d-block mx-auto my-2'>
                     <img style={{ width: '30px' }} src={facebookLogo} alt="" />
                     <span className='px-2 text-white'>Facebook Sign In</span></button>
             </div>
             <div>
-                <button onClick={() => signInWithGithub()} className='btn btn-secondary w-100 d-block mx-auto my-2'>
+                <button onClick={() => signInWithGithub()} className='btn btn-dark w-100 d-block mx-auto my-2'>
                     <img style={{ width: '30px' }} src={githubLogo} alt="" />
                     <span className='px-2 text-white'>GitHub Sign In</span></button>
             </div>

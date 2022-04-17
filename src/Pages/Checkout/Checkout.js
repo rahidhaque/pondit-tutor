@@ -23,7 +23,6 @@ const Checkout = () => {
                     <input type="password" name="password" id="password" placeholder='confirm your password' {...register("confirm your password", { required: true, maxLength: 100 })} />
                     <div>
                         <input className='btn btn-secondary' type="submit" value="Purchase" />
-                        <p></p>
                     </div>
                 </form>
             </div>

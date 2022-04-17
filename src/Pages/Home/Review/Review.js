@@ -28,9 +28,9 @@ const Review = ({ review }) => {
                         <Card.Text>
                             {description}
                         </Card.Text>
-                        <Card.Text className='fw-bold'>
-                            {`Rating:`} <PrettyRating value={rating} icons={icons.star} colors={colors.star} />
-                        </Card.Text>
+                        <span className='fw-bold'>
+                            {`Rating:`}  <PrettyRating value={rating} icons={icons.star} colors={colors.star} />
+                        </span>
                     </Card.Body>
                 </Card>
             </Col>
