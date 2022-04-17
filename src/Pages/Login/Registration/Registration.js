@@ -3,10 +3,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Registration.css'
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Registration = () => {
     const [agree, setAgree] = useState(false);
+    const navigate = useNavigate();
+    let errorElement;
+
     const [
         createUserWithEmailAndPassword,
         user,
@@ -15,8 +19,6 @@ const Registration = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
 
-
-    const navigate = useNavigate();
 
     const navigateLogin = event => {
         navigate('/login');
@@ -37,8 +39,18 @@ const Registration = () => {
         navigate('/');
     }
 
+    if (loading) {
+        return <Loading></Loading>
+    }
+
+    if (error) {
+        errorElement =
+            <p className='text-danger'>Error: {error?.message}</p>
+    }
+
+
     return (
-        <div className='register-form'>
+        <div className='mt-32 register-form min-vh-100'>
             <h2 className='register-text text-secondary'>Please Register</h2>
             <form onSubmit={handleRegister}>
                 <input type="text" name="name" id="name" placeholder='your name' required />
@@ -46,6 +58,9 @@ const Registration = () => {
                 <input type="email" name="email" id="email" placeholder='your email' required />
                 <br />
                 <input type="password" name="password" id="password" placeholder='your password' required />
+                <div className='mt-5 text-center'>
+                    {errorElement}
+                </div>
                 <div className='text-center mb-2'>
                     <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
                     {/* <label className={agree ? 'ps-2 text-primary' : 'ps-2 text-danger'} htmlFor="terms">Accept terms and Conditions</label> */}
@@ -55,7 +70,7 @@ const Registration = () => {
                     <input disabled={!agree} className='btn btn-secondary ' type="submit" value="Register" />
                 </div>
             </form>
-            <p className='mt-2 text-center'>Already have an account? <Link to={'/login'} className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+            <p className='mt-2 text-center'>Already have an account? <Link to={'/login'} className='text-secondary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
 
         </div>
     );
