@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Richard Smith",
+    "description": "One of the best teacher that I had the pleasure to hire. My children got very good grades.",
+    "rating": 5,
+    "img": "https://i.ibb.co/bQC8KZk/foto-sushi-6anudmp-ILw4-unsplash.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Sam Wilter",
+    "description": "Good teacher to hire in Dhaka",
+    "rating": 4.5,
+    "img": "https://i.ibb.co/D7RfLSY/brooke-cagle-w-KOKid-NT14w-unsplash.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Karen Gilian",
+    "description": "By hiring Mr.Rahid, my children got highest in his class.",
+    "rating": 5,
+    "img": "https://i.ibb.co/ck9Ckmx/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg"
+  }
+]
