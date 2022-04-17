@@ -1,0 +1,18 @@
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+a:hover {
+    color: orange !important;
+}
+
+.sub-btn {
+    border: 1px solid gray !important;
+}
+
+.sub-btn:hover {
+    border: 1px solid rgb(94, 85, 85) !important;
+}
+
+@media (min-width: 576px) {}

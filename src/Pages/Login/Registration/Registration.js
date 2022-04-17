@@ -69,7 +69,7 @@ const Registration = () => {
                     <label className={`ps-2 ${agree ? 'text-success' : 'text-danger'}`} htmlFor="terms">Accept terms and Conditions</label>
                 </div>
                 <div>
-                    <input disabled={!agree} className='btn btn-secondary ' type="submit" value="Register" />
+                    <input disabled={!agree} className='btn btn-dark ' type="submit" value="Register" />
                 </div>
             </form>
             <p className='mt-2 text-center'>Already have an account? <Link to={'/login'} className='text-secondary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>

@@ -19,7 +19,7 @@ const Service = ({ service }) => {
                         <Card.Text className='fw-bold'>
                             {`Price: ${price} Tk.`}
                         </Card.Text>
-                        <Button onClick={() => navigate(`/service/${id}`)} className='' variant="secondary">Book {name}</Button>
+                        <Button onClick={() => navigate(`/service/${id}`)} className='' variant="dark">Book {name}</Button>
                     </Card.Body>
                 </Card>
             </Col>

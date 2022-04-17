@@ -12,7 +12,7 @@ const Checkout = () => {
     return (
         <div>
             <div className='register-form text-center mb-5 w-25 mx-auto'>
-                <h1>Thanks For Checking Out</h1>
+                <h1 className='mt-5'>Thanks For Checking Out</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" name="f-name" id="f-name" placeholder='First name' {...register("First name", { required: true, maxLength: 80 })} />
                     <br />
@@ -22,7 +22,7 @@ const Checkout = () => {
                     <br />
                     <input type="password" name="password" id="password" placeholder='confirm your password' {...register("confirm your password", { required: true, maxLength: 100 })} />
                     <div>
-                        <input className='btn btn-secondary' type="submit" value="Purchase" />
+                        <input className='btn btn-dark' type="submit" value="Purchase" />
                         <p></p>
                     </div>
                 </form>
