@@ -1,11 +1,14 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import Loading from '../../Shared/Loading/Loading';
 
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 const Login = () => {
@@ -22,12 +25,25 @@ const Login = () => {
         error
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
 
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
+    }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Check Email Inbox for password reset!');
+        }
+        else {
+            toast('Please Enter Your Email');
+        }
     }
 
     if (error) {
@@ -47,7 +63,7 @@ const Login = () => {
         navigate('/registration');
     }
     return (
-        <div className='container w-50 mx-auto min-vh-100 m-auto'>
+        <div className='container w-50 mx-auto m-auto'>
             <h2 className='text-secondary text-center mt-5'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -60,12 +76,14 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
-            <div className='mt-5 text-center'>
+            <div className='mt-2 text-center'>
                 {errorElement}
             </div>
             <p className='text-center mt-2'>New to Genius Car? <Link to="/registration" className='text-secondary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
             <p className='text-center mt-2'>Forget Password?
-                <button variant='secondary' className='btn btn-link text-secondary pe-auto text-decoration-none'>Reset Now</button> </p>
+                <button variant='secondary' className='btn btn-link text-secondary pe-auto text-decoration-none' onClick={resetPassword}>Reset Now</button> </p>
+            <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };

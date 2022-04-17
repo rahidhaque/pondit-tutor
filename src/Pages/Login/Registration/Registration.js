@@ -4,6 +4,7 @@ import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Registration.css'
 import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 const Registration = () => {
@@ -51,7 +52,7 @@ const Registration = () => {
 
 
     return (
-        <div className='mt-32 register-form min-vh-100'>
+        <div className='mt-32 register-form'>
             <h2 className='register-text text-secondary'>Please Register</h2>
             <form onSubmit={handleRegister}>
                 <input type="text" name="name" id="name" placeholder='your name' required />
@@ -59,7 +60,7 @@ const Registration = () => {
                 <input type="email" name="email" id="email" placeholder='your email' required />
                 <br />
                 <input type="password" name="password" id="password" placeholder='your password' required />
-                <div className='mt-5 text-center'>
+                <div className='mt-2 text-center'>
                     {errorElement}
                 </div>
                 <div className='text-center mb-2'>
@@ -72,7 +73,7 @@ const Registration = () => {
                 </div>
             </form>
             <p className='mt-2 text-center'>Already have an account? <Link to={'/login'} className='text-secondary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
-
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
