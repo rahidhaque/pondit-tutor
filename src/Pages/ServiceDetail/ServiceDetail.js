@@ -28,7 +28,7 @@ const ServiceDetail = () => {
                         <Card.Text className='fw-bold text-xl'>
                             Thank you for choosing {service?.name}! Please Checkout to continue...
                         </Card.Text>
-                        <Button onClick={() => navigate(`/checkout`)} className='' variant="secondary">Checkout</Button>
+                        <Button onClick={() => navigate(`/checkout`)} className='' variant="dark">Checkout</Button>
                     </Card.Body>
                 </Card>
             </Col>

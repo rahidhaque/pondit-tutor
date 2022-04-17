@@ -31,7 +31,7 @@ const Newsletter = () => {
 
                                 <div className="col-auto">
 
-                                    <button type="submit" className="btn btn-secondary mb-4">
+                                    <button type="submit" className="btn btn-dark mb-4">
                                         Subscribe
                                     </button>
                                 </div>

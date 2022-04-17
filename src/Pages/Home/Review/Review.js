@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import PrettyRating from 'pretty-rating-react';
-import { icon } from '@fortawesome/fontawesome-svg-core';
+
 
 const Review = ({ review }) => {
     const icons = {
@@ -19,7 +19,7 @@ const Review = ({ review }) => {
 
 
     return (
-        <div className="g-4 col-sm-12 col-md-12 col-lg-4 position-relative">
+        <div className="g-4 col-sm-12 col-md-12 col-lg-4 position-relative mb-5">
             <Col>
                 <Card className='text-center mx-auto rounded-3' style={{ width: '14rem' }}>
                     <Card.Img className='rounded-2' variant="top" src={img} />
