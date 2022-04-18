@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,6 +18,12 @@ const Login = () => {
     const location = useLocation();
     let errorElement;
     let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    })
     const [
         signInWithEmailAndPassword,
         user,
@@ -55,9 +61,8 @@ const Login = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
-        navigate(from, { replace: true });
-    }
+
+
 
     const navigateRegister = event => {
         navigate('/registration');
