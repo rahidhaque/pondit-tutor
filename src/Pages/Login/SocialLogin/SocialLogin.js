@@ -3,21 +3,20 @@ import googleLogo from '../../../Images/social/google.png'
 import githubLogo from '../../../Images/social/github.png'
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const navigate = useNavigate();
-    const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+
     let errorElement;
     let loadingElement;
 
     useEffect(() => {
         if (user || user1) {
-            navigate(from, { replace: true });
+            navigate('/');
         }
     })
 

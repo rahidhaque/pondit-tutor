@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Registration.css'
@@ -10,11 +10,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 const Registration = () => {
     const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
     let errorElement;
-
-
 
     const [
         createUserWithEmailAndPassword,
@@ -43,7 +39,7 @@ const Registration = () => {
 
     useEffect(() => {
         if (user) {
-            navigate(from, { replace: true });
+            navigate('/');
         }
     })
 
