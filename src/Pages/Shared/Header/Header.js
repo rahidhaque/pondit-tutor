@@ -2,9 +2,10 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import logo from '../../../Images/Logo.png'
+
 import './Header.css'
 
 const Header = () => {
@@ -27,18 +28,21 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav defaultActiveKey={'/'} className="me-auto">
                             <Nav.Link eventKey={'link-1'} href="/#services">Services</Nav.Link>
-
                             <Nav.Link eventKey={'link-2'} href="/#reviews">Reviews</Nav.Link>
                         </Nav>
-                        <Nav defaultActiveKey={'/home'}>
-                            <Nav.Link eventKey={'link-1'} as={Link} to="/about">About</Nav.Link>
-                            <Nav.Link eventKey={'link-2'} as={Link} to="/blog">Blog</Nav.Link>
+                        <Nav>
+                            <NavLink className="d-flex align-items-center mx-2" to='/' style={({ isActive }) =>
+                                (isActive ? { color: 'orange' } : { color: 'white' })}>Home</NavLink>
+                            <NavLink className="d-flex align-items-center mx-2" to='/about' style={({ isActive }) =>
+                                (isActive ? { color: 'orange' } : { color: 'white' })}>About</NavLink>
+                            <NavLink className="d-flex align-items-center mx-2" to='/blog' style={({ isActive }) =>
+                                (isActive ? { color: 'orange' } : { color: 'white' })}>Blog</NavLink>
 
                             {user ?
                                 <button onClick={handleSignOut} className='btn btn-link text-white text-decoration-none'>Sign Out</button> :
-                                <Nav.Link as={Link} to="/login">
-                                    Login
-                                </Nav.Link>}
+                                <NavLink className="d-flex align-items-center mx-2" to='/login' style={({ isActive }) =>
+                                    (isActive ? { color: 'orange' } : { color: 'white' })}>Login</NavLink>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -51,7 +51,7 @@ const Login = () => {
             <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    if (loading) {
+    if (loading || sending) {
         return <Loading></Loading>
     }
 

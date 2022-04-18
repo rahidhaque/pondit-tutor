@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css'
 import { Icon } from '@iconify/react';
 import logo from '../../../Images/Logo.png'
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
 
             <footer className="footer-container footer-10 bg-dark">
                 <div className="container">
-                    <div className="row mb-5 pb-3 no-gutters">
+                    <div className="row mb-2 pb-3 no-gutters">
                         <div className="col-md-4 mb-md-0 mb-4 d-flex">
                             <div className="con con-1 w-100 py-5">
                                 <div className="con-info w-100 text-center">
@@ -41,7 +42,7 @@ const Footer = () => {
                                         <span><Icon icon="ion-ios-pin" /></span>
                                     </div>
                                     <div className="text">
-                                        <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+                                        <span>76 Segunbagicha, Dhaka</span>
                                     </div>
                                 </div>
                             </div>
@@ -53,27 +54,38 @@ const Footer = () => {
                                 <div className="col-md-4 mb-md-0 mb-4">
                                     <h2 className="footer-heading">About</h2>
                                     <ul className="list-unstyled">
-                                        <li><a href="#" className="d-block">Out story</a></li>
-                                        <li><a href="#" className="d-block">Awards</a></li>
-                                        <li><a href="#" className="d-block">Our Team</a></li>
-                                        <li><a href="#" className="d-block">Career</a></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Out story</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Awards</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Our Team</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Career</NavLink></li>
                                     </ul>
                                 </div>
                                 <div className="col-md-4 mb-md-0 mb-4">
                                     <h2 className="footer-heading">Company</h2>
                                     <ul className="list-unstyled">
-                                        <li><a href="#" className="d-block">Our services</a></li>
-                                        <li><a href="#" className="d-block">Clients</a></li>
-                                        <li><a href="#" className="d-block">Contact</a></li>
-                                        <li><a href="#" className="d-block">Press</a></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Our services</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Clients</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Contact</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Press</NavLink></li>
                                     </ul>
                                 </div>
                                 <div className="col-md-4 mb-md-0 mb-4">
                                     <h2 className="footer-heading">Resources</h2>
                                     <ul className="list-unstyled">
-                                        <li><a href="#" className="d-block">Blog</a></li>
-                                        <li><a href="#" className="d-block">Newsletter</a></li>
-                                        <li><a href="#" className="d-block">Privacy Policy</a></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/blog" className="d-block">Blog</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Newsletter</NavLink></li>
+                                        <li><NavLink style={({ isActive }) =>
+                                            (isActive ? { color: 'white' } : { color: 'white' })} to="/" className="d-block">Privacy Policy</NavLink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -100,18 +112,18 @@ const Footer = () => {
                                 <img style={{ height: '30px' }} src={logo} alt="" />
                             </p>
                         </div>
-                        <div className="col-md-6 col-lg-4 text-md-right">
-                            <ul className="ftco-footer-social p-0">
-                                <li><a href="https://twitter.com/home?lang=en" data-toggle="tooltip" data-placement="top" title="Twitter">
-                                    <span><Icon icon="ion-logo-twitter" /></span>
-                                </a></li>
-                                <li><a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="top" title="Facebook">
-                                    <span><Icon icon="ion-logo-facebook" /></span>
-                                </a></li>
-                                <li><a href="https://www.instagram.com/?hl=en" data-toggle="tooltip" data-placement="top" title="Instagram">
-                                    <span><Icon icon="ion-logo-instagram" /></span>
-                                </a></li>
-                            </ul>
+                        <div className="col-md-6 col-lg-4 text-md-right text-center">
+
+                            <a className='mx-2 text-white' href="https://twitter.com/home?lang=en" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                <span><Icon icon="ion-logo-twitter" /></span>
+                            </a>
+                            <a className='mx-2 text-white' href="https://www.facebook.com/" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                <span><Icon icon="ion-logo-facebook" /></span>
+                            </a>
+                            <a className='mx-2 text-white' href="https://www.instagram.com/?hl=en" data-toggle="tooltip" data-placement="top" title="Instagram">
+                                <span><Icon icon="ion-logo-instagram" /></span>
+                            </a>
+
                         </div>
                     </div>
                 </div>

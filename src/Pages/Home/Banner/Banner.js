@@ -20,7 +20,7 @@ const Banner = () => {
                     src={banner1}
                     alt="First slide"
                 />
-                <Carousel.Caption className='fw-bold text-xl'>
+                <Carousel.Caption className='fw-bold text-xl text-white-50'>
                     <h3>Home Teaching</h3>
                     <p>I am readily available to teach 5 days a week during evening in Home.</p>
                 </Carousel.Caption>
@@ -32,7 +32,7 @@ const Banner = () => {
                     alt="Second slide"
                 />
 
-                <Carousel.Caption className='fw-bold text-xl'>
+                <Carousel.Caption className='fw-bold text-xl text-white-50'>
                     <h3>Online Teaching</h3>
                     <p>If there is any concern due to Corona I will be avaiable to teach you online.</p>
                 </Carousel.Caption>
@@ -44,7 +44,7 @@ const Banner = () => {
                     alt="Third slide"
                 />
 
-                <Carousel.Caption className='fw-bold text-xl'>
+                <Carousel.Caption className='fw-bold text-xl text-white-50'>
                     <h3>Full Support</h3>
                     <p>
                         Even during my off hours student can clear confusion by knocking in social media or by phone.

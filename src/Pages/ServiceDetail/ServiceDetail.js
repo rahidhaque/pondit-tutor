@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ServiceContext } from '../../App';
+import auth from '../../firebase.init';
 import './ServiceDetail.css'
 
 const ServiceDetail = () => {
@@ -10,7 +12,8 @@ const ServiceDetail = () => {
     const navigate = useNavigate();
     const id = parseInt(serviceId);
     const service = services.find((service) => service.id === id);
-    console.log(service);
+
+
     return (
         <div>
             <h2 className='text-center text-secondary mt-5'>Subject Overview</h2>
