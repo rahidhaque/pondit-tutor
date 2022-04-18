@@ -1,17 +1,16 @@
 import React, { useContext } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ServiceContext } from '../../App';
-import auth from '../../firebase.init';
 import './ServiceDetail.css'
 
 const ServiceDetail = () => {
     const [services] = useContext(ServiceContext);
     const { serviceId } = useParams();
-    const navigate = useNavigate();
     const id = parseInt(serviceId);
+
     const service = services.find((service) => service.id === id);
+    const navigate = useNavigate();
 
 
     return (

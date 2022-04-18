@@ -8,5 +8,5 @@ a {
 }
 
 a:hover {
-    color: orange;
+    color: orange !important;
 }
