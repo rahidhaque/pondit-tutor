@@ -18,7 +18,7 @@ const Header = () => {
     // const location = useLocation();
     // console.log(location);
     return (
-        <div className='sticky-top'>
+        <div className=''>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant='dark'>
                 <Container>
                     <Navbar.Brand as={Link} to="/">
