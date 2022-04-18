@@ -68,10 +68,10 @@ const Login = () => {
         navigate('/registration');
     }
     return (
-        <div className='container w-50 mx-auto m-auto'>
+        <div className='container'>
             <h2 className='text-secondary text-center mt-5'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="w-sm-100 mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -84,7 +84,7 @@ const Login = () => {
             <div className='mt-2 text-center'>
                 {errorElement}
             </div>
-            <p className='text-center mt-2'>New to Genius Car? <Link to="/registration" className='text-secondary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+            <p className='text-center mt-2'>New to Pondit Tutor? <Link to="/registration" className='text-secondary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
             <p className='text-center mt-2'>Forget Password?
                 <button variant='dark' className='btn btn-link text-secondary pe-auto text-decoration-none' onClick={resetPassword}>Reset Now</button> </p>
             <SocialLogin></SocialLogin>

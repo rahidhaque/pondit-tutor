@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Registration.css'
@@ -10,7 +10,11 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 const Registration = () => {
     const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     let errorElement;
+
+
 
     const [
         createUserWithEmailAndPassword,
@@ -37,9 +41,11 @@ const Registration = () => {
         await updateProfile({ displayName: name });
     }
 
-    if (user) {
-        navigate('/');
-    }
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    })
 
     if (loading || updating) {
         return <Loading></Loading>
@@ -52,7 +58,7 @@ const Registration = () => {
 
 
     return (
-        <div className='mt-32 register-form'>
+        <div className='container register-form'>
             <h2 className='register-text text-secondary'>Please Register</h2>
             <form onSubmit={handleRegister}>
                 <input type="text" name="name" id="name" placeholder='your name' required />

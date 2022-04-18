@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Physics",
         "price": "3000",
-        "description": "Your child may face Newton's Gravity while understanding the theory. But hiring me can eliminate those issue with ease.",
+        "description": "Your child may face Newton's Gravity while understanding the theory of physics. But hiring me can eliminate those issue with ease.",
         "img": "https://i.ibb.co/J743X04/service1.jpg"
     },
     {
@@ -24,7 +24,7 @@
         "id": 4,
         "name": "Biology",
         "price": "4500",
-        "description": "Having hard time understanding. Then wait no more to hire me for this service.",
+        "description": "Having hard time understanding about the basics of human body. Then wait no more to hire me for biology.",
         "img": "https://i.ibb.co/YBhY5H9/service4.jpg"
     },
     {
